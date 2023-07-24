@@ -2,7 +2,7 @@ import React from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-    retrun (
+    return (
         <form>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
