@@ -40,6 +40,16 @@ const ExpenseForm = () => {
         //})
     };
 
+    const inputChangeHandler = (identifier, value) => {
+        if (identifier === 'title') {
+            setEnteredTitle(value);
+        } else if (identifier === 'date') {
+            setEnteredDate(value);
+        } else {
+            setEnteredAmount(value);
+        }
+    };
+
     return (
         <form>
             <div className='new-expense__controls'>
