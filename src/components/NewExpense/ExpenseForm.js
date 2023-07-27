@@ -7,40 +7,51 @@ const ExpenseForm = () => {
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
-    //const [userInput, setUserInput] = useState({
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        };
+        console.log(expenseData);
+    };
+
+    /*const [userInput, setUserInput] = useState({
     //    enteredTitle: '',
     //    enteredAmount: '',
     //    enteredDate: ''
-    //});
+    });*/
 
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
-        //setUserInput({
+        /*setUserInput({
         //   ...userInput,
         //   enteredTitle: event.target.value,
         //})
         //setUserInput((prevState) => {
         //    return {...prevState, enteredTitle: event.target.value}; // when state update depends on the prev state
-        //});
+        });*/
     };
 
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
-       // setUserInput({
+       /* setUserInput({
         //    ...userInput,
         //   enteredAmount: event.target.value,
-        //})
+        })*/
     };
 
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
-        //setUserInput({
+        /*setUserInput({
         //    ...userInput,
         //    enteredDate: event.target.value,
-        //})
+        })*/
     };
 
-    const inputChangeHandler = (identifier, value) => {
+    /*const inputChangeHandler = (identifier, value) => {
         if (identifier === 'title') {
             setEnteredTitle(value);
         } else if (identifier === 'date') {
@@ -48,10 +59,10 @@ const ExpenseForm = () => {
         } else {
             setEnteredAmount(value);
         }
-    };
+    };*/
 
     return (
-        <form>
+        <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>{enteredTitle}</label>
