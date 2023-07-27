@@ -15,54 +15,24 @@ const ExpenseForm = () => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
+
         console.log(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
     };
 
-    /*const [userInput, setUserInput] = useState({
-    //    enteredTitle: '',
-    //    enteredAmount: '',
-    //    enteredDate: ''
-    });*/
-
     const titleChangeHandler = (event) => {
         setEnteredTitle(event.target.value);
-        /*setUserInput({
-        //   ...userInput,
-        //   enteredTitle: event.target.value,
-        //})
-        //setUserInput((prevState) => {
-        //    return {...prevState, enteredTitle: event.target.value}; // when state update depends on the prev state
-        });*/
     };
 
     const amountChangeHandler = (event) => {
         setEnteredAmount(event.target.value);
-       /* setUserInput({
-        //    ...userInput,
-        //   enteredAmount: event.target.value,
-        })*/
     };
 
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
-        /*setUserInput({
-        //    ...userInput,
-        //    enteredDate: event.target.value,
-        })*/
     };
-
-    /*const inputChangeHandler = (identifier, value) => {
-        if (identifier === 'title') {
-            setEnteredTitle(value);
-        } else if (identifier === 'date') {
-            setEnteredDate(value);
-        } else {
-            setEnteredAmount(value);
-        }
-    };*/
 
     return (
         <form onSubmit={submitHandler}>
