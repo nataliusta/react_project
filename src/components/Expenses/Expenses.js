@@ -1,11 +1,15 @@
 import React from 'react';
 import ExpenseItem from "./ExpenseItem";
+import ExpensesFilter from './ExpensesFilter';
 import Card from '../UI/Card';
 import './Expenses.css';
 
 const Expenses = (props) => {
       return (
         <Card className='expenses'>
+            <div>
+                <ExpensesFilter />
+            </div>
             <ExpenseItem 
                 id={props.items[0].id}
                 title={props.items[0].title}
