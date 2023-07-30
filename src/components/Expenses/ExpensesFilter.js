@@ -4,8 +4,8 @@ import './ExpensesFilter.css';
 
 const ExpensesFilter = () => {
 
-    const yearChangeHandler = () => {
-        console.log('Year changed');
+    const yearChangeHandler = (event) => {
+        console.log(event.target.value);
     };
   return (
     <div className='expenses-filter'>
